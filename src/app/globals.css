@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Stylus ITC Std";
+  src: url("/fonts/Stylus_ITC_Std_Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  --breakpoint-md-nav: 860px;
+}
+
+body {
+  background: #ffffff;
+  color: #111827;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* ── Landing page responsive ── */
+@media (max-width: 700px) {
+  .lp-nav-inner { padding: 0 20px !important; }
+  .lp-section { padding: 48px 0 !important; }
+  .lp-section-inner { padding: 0 20px !important; }
+  .lp-hero-grid { grid-template-columns: 1fr !important; }
+  .lp-hero-visual { display: none !important; }
+  .lp-hero-h1 { font-size: 34px !important; line-height: 1.1 !important; }
+  .lp-h2 { font-size: 28px !important; }
+  .lp-problem-grid { grid-template-columns: 1fr !important; }
+  .lp-solution-row { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .lp-steps-grid { grid-template-columns: 1fr !important; }
+  .lp-step { border-right: none !important; border-bottom: 1px solid #F3F4F6 !important; }
+  .lp-step:last-child { border-bottom: none !important; }
+  .lp-pricing-grid { grid-template-columns: 1fr !important; }
+  .lp-cta-h2 { font-size: 28px !important; }
+  .lp-footer-inner { padding: 0 20px !important; }
+  .lp-footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; padding-bottom: 32px !important; }
+}
